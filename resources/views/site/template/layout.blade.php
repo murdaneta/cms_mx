@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta charset="utf-8">
+    <meta name="google-site-verification" content="LOIazz4KVfNACQDqBxFc03rQm0PHjOG9iHi99x3gtlc" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:300,400italic,400,500">
