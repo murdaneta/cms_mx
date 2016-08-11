@@ -12,7 +12,7 @@
 		        <li><a href="">Contacts</a></li>
 		        @if(Auth::check())
 		        <li><a href="{{ route('auth/logout') }}">cerrar sesión</a></li>
-		        <li><a href="{{ route('system') }}">systema</a></li>
+		        <li><a href="{{ route('system') }}">sistema</a></li>
 		        @else
 		        <li><a href="{{ route('login') }}">Login</a></li>
 		        @endif

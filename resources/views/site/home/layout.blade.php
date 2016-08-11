@@ -34,20 +34,20 @@
         </div>
         @endif
         @empty
-        <div data-slide-bg="http://placehold.it/728x090?text=Publicidad+Principal+728X90" class="swiper-slide">
-          <div class="swiper-slide-caption {{ $i++ }}">
+        <div data-slide-bg="http://placehold.it/1170x600?text=Agrege+una+noticia+imagen+de:+1170x600" class="swiper-slide">
+          <div class="swiper-slide-caption">
             <div class="jubotron-variant-1">
               <div class="post-meta">
-                <p>Publicado por<a href="blog_post.html"> {!! $notice->user->name!!}</a> &bull;
-                  <time datetime="2016"><a href=""> {!! $notice->created_at !!}</a></time>
+                <p>Publicado por<a href="#"> Nombre de usuario</a> &bull;
+                  <time datetime="2016"><a href=""> Fecha de publicacion</a></time>
                 </p>
               </div>
               <h2>
-                <a href="{{ route('blog.post') }}l">
-                  {!! $notice->name !!}
+                <a href="#">
+                  Agrege una Noticia
                 </a>
               </h2>
-              <a href="{{ route('blog.post') }}l" class="btn btn-green btn-md">
+              <a href="#" class="btn btn-green btn-md">
                 Leer Más
               </a>
             </div>
