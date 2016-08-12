@@ -20,7 +20,7 @@ class Notice extends Model
 							'secction',
 							'content',
 							'description',
-							'categorie_id',
+							'category_id',
 							'user_id'];
 	public function img()
     {
@@ -30,9 +30,9 @@ class Notice extends Model
     {
         return $this->belongsTo('App\User');
     }
-    public function categorie()
+    public function category()
     {
-        return $this->belongsTo('App\Categorie');
+        return $this->belongsTo('App\Category');
     }
     public function oneImg($images){
         foreach ($images as $img) {

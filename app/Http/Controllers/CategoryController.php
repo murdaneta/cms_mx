@@ -6,31 +6,31 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Requests\CategorieRequest;
-use App\Categorie;
+use App\Category;
 
-class CategorieController extends Controller
+class CategoryController extends Controller
 {
    //
     public function index(){
-    	$categories = Categorie::all();
-        return view('admin.categorie.index', compact('categories'));
+    	$categories = Category::all();
+        return view('admin.category.index', compact('categories'));
     }
     public function create(){
-        return view('admin.categorie.create');
+        return view('admin.category.create');
     }
     public function store(CategorieRequest $request){
     	$request['user_id']=\Auth::user()->id;
-    	$categorie=Categorie::create($request->all());
-        \Session::flash('flash_message', 'La Categoria '.'"'.$categorie->name.'"'.' ha sido guardada exitosamente');
+    	$category=Category::create($request->all());
+        \Session::flash('flash_message', 'La Categoria '.'"'.$category->name.'"'.' ha sido guardada exitosamente');
         return redirect()->route('system.categories.index');
     }
     public function edit($id){
-    	$categorie = Categorie::find($id);
-        return view('admin.categorie.edit', compact('categorie'));
+    	$category = Category::find($id);
+        return view('admin.category.edit', compact('category'));
     }
     public function update(CategorieRequest $request , $id){
-    	$categorie=Categorie::find($id);
-    	$categorie=$categorie->update($request->all());
+    	$category=Category::find($id);
+    	$category=$category->update($request->all());
         \Session::flash('flash_message', 'La Categoria ha sido editada exitosamente');
         return redirect()->route('system.categories.index');
 

@@ -4,7 +4,7 @@
 @section('content-page')
 	<div class="title-block">
 		<h3 class="title">
-		Editar Categoria | {{ $categorie->title }}
+		Editar Categoria | {{ $category->title }}
 		</h3>
 		<p class="title-description">Editando una noticia.</p>
 	</div>
@@ -17,8 +17,8 @@
 							<i class="fa fa-file-text-o"></i> Noticia
 						</h3>
 					</div>
-					{!! Form::model($categorie,['route'=>['system.categories.update',$categorie->id],'method'=>'PUT']) !!}
-                    @include('admin.categorie.fields')
+					{!! Form::model($category,['route'=>['system.categories.update',$category->id],'method'=>'PUT']) !!}
+                    @include('admin.category.fields')
                     <fieldset class="form-group">
                     	<button type="submit" class="btn btn-primary">
 							Guardar

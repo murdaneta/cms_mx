@@ -18,7 +18,7 @@
 						</h3>
 					</div>
 					{!! Form::open(['route'=>'system.categories.store','method'=>'POST']) !!}
-                    @include('admin.categorie.fields')
+                    @include('admin.category.fields')
                     <fieldset class="form-group">
                     	<button type="submit" class="btn btn-primary">
 							Guardar

@@ -31,7 +31,7 @@ Route::group(['prefix' => 'system'], function()
 		    return view('admin.dashboard.layout');
 		}]);
 		Route::resource('news','NewController');
-		Route::resource('categories','CategorieController');
+		Route::resource('categories','CategoryController');
 	});
 });
 Route::get('/', function () {

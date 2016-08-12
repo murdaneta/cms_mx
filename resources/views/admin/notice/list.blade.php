@@ -48,7 +48,7 @@
 	                                        	{{ $notice->status }}
 	                                        </td>
 	                                        <td>
-	                                        	{{ $notice->categorie_id }}
+	                                        	{{ $notice->category->name }}
 	                                        </td>
 	                                        <td class="center">
 	                                        	<div class="btn-group btn-group-sm">

@@ -29,23 +29,23 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    @forelse( $categories as $categorie)
+                                    @forelse( $categories as $category)
 	                                    <tr>
 	                                        <td>
-	                                        	{{ $categorie->id }}
+	                                        	{{ $category->id }}
 	                                        </td>
 	                                        <td>
-	                                        	{{ $categorie->name }}
+	                                        	{{ $category->name }}
 	                                        </td>
 	                                        <td>
-	                                        	{{ $categorie->index }}
+	                                        	{{ $category->index }}
 	                                        </td>
 	                                        <td>
-	                                        	{{ $categorie->user_id }}
+	                                        	{{ $category->user_id }}
 	                                        </td>
 	                                        <td class="center">
 	                                        	<div class="btn-group btn-group-sm">
-                                            		<a href="{{ route('system.categories.edit',$categorie->id) }}" type="button" class="btn btn-info">
+                                            		<a href="{{ route('system.categories.edit',$category->id) }}" type="button" class="btn btn-info">
                                             			Editar
                                             		</a>
                                             		<a type="button" class="btn btn-danger">

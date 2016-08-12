@@ -15,7 +15,7 @@
       <!--Section Main-->
       <div class="col-xs-12 col-lg-8">
         <div class="wrap-1 bg-gray border-mandy">
-          <div class="tag-group"><a href="#" class="tag bg-crusta">{{ $notice->categorie->name }}</a></div>
+          <div class="tag-group"><a href="#" class="tag bg-crusta">{{ $notice->category->name }}</a></div>
           <div class="post-title">
             <h5>{{ $notice->title }}</h5>
           </div>

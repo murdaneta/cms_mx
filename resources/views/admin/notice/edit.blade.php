@@ -29,8 +29,8 @@
                     	{!! Form::text('title', null, ['class'=>'form-control','required','placeholder'=>'Ingrese el titulo para la noticia']) !!}
                     </fieldset>
                     <fieldset class="form-group">
-                    	{!! Form::label('categorie_id','Nombre de la noticia',['class'=>'control-label']) !!}
-                    	{!! Form::select('categorie_id',App\Categorie::all()->lists("name","id"),null,['class'=>'c-select form-control boxed']) !!}
+                    	{!! Form::label('category_id','Nombre de la noticia',['class'=>'control-label']) !!}
+                    	{!! Form::select('category_id',App\Category::all()->lists("name","id"),null,['class'=>'c-select form-control boxed']) !!}
                     </fieldset>
                     <fieldset class="form-group">
                         {!! Form::label('secction','Situar Noticia',['class'=>'control-label']) !!}

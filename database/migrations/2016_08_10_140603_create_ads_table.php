@@ -16,8 +16,8 @@ class CreateAdsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('link');
-            $table->integer('categorie_id')->unsigned();
-            $table->foreign('categorie_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->integer('image_id')->unsigned();
             $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
             $table->timestamps();
