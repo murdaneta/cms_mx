@@ -8,14 +8,16 @@ use App\Http\Requests\SaveNotice;
 use App\Http\Requests\UpdateNotice;
 use App\Notice;
 use App\Categorie;
+use App\Social;
 use App\Image;
 
 class NewController extends Controller
 {
     //
     public function index(){
-    	$news = Notice::all();
-        return view('admin.notice.list', compact('news'));
+        $news = Notice::all();
+    	$socials = Social::all();
+        return view('admin.notice.list', compact('news', 'socials'));
     }
     public function create(){
         return view('admin.notice.create');

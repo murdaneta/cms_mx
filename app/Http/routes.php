@@ -32,11 +32,10 @@ Route::group(['prefix' => 'system'], function()
 		}]);
 		Route::resource('news','NewController');
 		Route::resource('categories','CategoryController');
+		Route::resource('social','SocialController');
 	});
 });
-Route::get('/', function () {
-    return view('site.home.layout');
-});
+Route::get('/', 'SiteController@index');
 Route::get('/blog/post/{id}',['as' =>'blog.post', function ($id) {
 	$notice=App\Notice::find($id);
     return view('site.post.layout',compact('notice'));
