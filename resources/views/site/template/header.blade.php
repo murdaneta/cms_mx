@@ -40,10 +40,11 @@
 		    <div class="rd-navbar-brand"><a href="index.html" class="brand-name"><span class="text-bold">90</span><span>total</span><span class="brand-slogan">Las últimas noticias de deportes</span></a></div>
 		    <div class="block-banner"><a href="#"><span><!--Banner space 728X90--></span><img src="http://placehold.it/728x090?text=Publicidad+Principal+728X90" alt="" width="728" height="90"></a></div>
 		    <ul class="list-inline-variant-1">
-		      <li><a href="#" class="fa-facebook"></a></li>
-		      <li><a href="#" class="fa-twitter"></a></li>
-		      <li><a href="#" class="fa-google-plus"></a></li>
-		      <li><a href="#" class="fa-youtube"></a></li>
+		    @if($socials)
+		    @foreach( $socials as $social )
+		      <li><a href="{{ $social->link }}" class="fa-{{ $social->name }}"></a></li>
+		    @endforeach
+		    @endif
 		    </ul>
 		  </div>
 		  <div class="rd-navbar-nav-wrap">

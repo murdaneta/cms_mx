@@ -45,6 +45,24 @@
                     </ul>
                 </li>
                 <li>
+                    <a href="#">
+                        <i class="fa fa-th-large"></i> Redes Sociales
+                        <i class="fa arrow"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="{{ route('system.social.create') }}">
+                                Crear
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('system.social.index') }}"> 
+                                Ver todas
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
                     <a href="{{ url('/') }}"> <i class="fa fa-eye"></i> Ver Principal </a>
                 </li>
             </ul>
