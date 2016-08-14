@@ -4,14 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests\SaveNotice;
-use App\Http\Requests\UpdateNotice;
+use App\Http\Requests\NoticeRequest;
 use App\Notice;
-use App\Categorie;
+use App\Category;
 use App\Social;
 use App\Image;
 
-class NewController extends Controller
+class NoticeController extends Controller
 {
     //
     public function index(){
@@ -22,9 +21,9 @@ class NewController extends Controller
     public function create(){
         return view('admin.notice.create');
     }
-    public function store(SaveNotice $request){
+    public function store(NoticeRequest $request){
         //obtenemos el campo file definido en el formulario
-        $namefile=$this->uploadImg($request->file('file'),$request->categorie_id);
+        $namefile=$this->uploadImg($request->file('file'),$request->category_id);
         $request['user_id']=\Auth::user()->id;
         $img= new Image;
         $img->name=$namefile;
@@ -40,7 +39,7 @@ class NewController extends Controller
     	$notice = Notice::find($id);
         return view('admin.notice.edit', compact('notice'));
     }
-    public function update(UpdateNotice $request, $id){
+    public function update(NoticeRequest $request, $id){
         $news = Notice::find($id);
         $news->update($request->all());
         \Session::flash('flash_message', 'La Noticia '.'"'.$news->name.'"'.' ha sido actualizada exitosamente');
@@ -49,10 +48,8 @@ class NewController extends Controller
     }
     public function uploadImg($file,$category)
     {
-     
-           
-           //$file = $request->file('file');
-            $category_=Categorie::find($category);
+           //$file = $request->file('file'); 
+            $category_=Category::find($category);
            //Creamos el nombre del archivo
            $nombre = $category_->id."_".time().'.'.$file->guessExtension();
      

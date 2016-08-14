@@ -30,7 +30,7 @@ Route::group(['prefix' => 'system'], function()
 		Route::get('/dashboard',['as' =>'system', function () {
 		    return view('admin.dashboard.layout');
 		}]);
-		Route::resource('news','NewController');
+		Route::resource('news','NoticeController');
 		Route::resource('categories','CategoryController');
 		Route::resource('social','SocialController');
 	});
@@ -39,4 +39,8 @@ Route::get('/', 'SiteController@index');
 Route::get('/blog/post/{id}',['as' =>'blog.post', function ($id) {
 	$notice=App\Notice::find($id);
     return view('site.post.layout',compact('notice'));
+}]);
+Route::get('/category/{name}',['as' =>'category.name', function ($name) {
+	$category=App\Category::where('name',$name)->first();
+    return view('site.category.layout',compact('category'));
 }]);

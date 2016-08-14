@@ -37,7 +37,8 @@
                         {!! Form::select('secction',[
                             null=>null,
                             'slider'				=>'slider',
-                            'top news'				=>'top news',
+                            'top news'	     		=>'top news(293x231)',
+                            'top news main'         =>'top news main(586x462)',
                             'featured news'			=>'featured news',
                             'latest news'			=>'latest news',
                             'recent sports events'	=>'recent sports events',

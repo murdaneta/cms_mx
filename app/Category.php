@@ -18,8 +18,8 @@ class Category extends Model
 							'description',
 							'index',
 							'user_id'];
-	public function notice()
+	public function news()
     {
-        return $this->belongsTo('App\Notice');
+        return $this->belongsTo('App\Notice','id');
     }
 }

@@ -4,175 +4,14 @@
 <section class="section-50">
   <div class="container">
     <!-- Swiper-->
-    <div data-height="" data-min-height="300px" class="swiper-container swiper-slider border-crusta">
-      <div class="swiper-wrapper">
-        <?php $i=0;?>
-        @forelse(App\Notice::where('secction','slider')->orderBy('id', 'desc')->get() as $notice)
-        @if($i<=4)
-        <div data-slide-bg="{!! $notice->oneImg($notice->img) !!}" class="swiper-slide">
-          <div class="swiper-slide-caption {{ $i++ }}">
-            <div class="jubotron-variant-1">
-              <div class="post-meta">
-                <p>Publicado por<a href="blog_post.html"> {!! $notice->user->name!!}</a> &bull;
-                  <time datetime="2016">
-                    <a href="{{ route('blog.post', $notice->id) }}"> 
-                      {!! $notice->created_at !!}
-                    </a>
-                  </time>
-                </p>
-              </div>
-              <h2>
-                <a href="{{ route('blog.post', $notice->id) }}">
-                  {!! $notice->name !!}
-                </a>
-              </h2>
-              <a href="{{ route('blog.post', $notice->id) }}" class="btn btn-green btn-md">
-                Leer Más
-              </a>
-            </div>
-          </div>
-        </div>
-        @endif
-        @empty
-        <div data-slide-bg="http://placehold.it/1170x600?text=Agrege+una+noticia+imagen+de:+1170x600" class="swiper-slide">
-          <div class="swiper-slide-caption">
-            <div class="jubotron-variant-1">
-              <div class="post-meta">
-                <p>Publicado por<a href="#"> Nombre de usuario</a> &bull;
-                  <time datetime="2016"><a href=""> Fecha de publicacion</a></time>
-                </p>
-              </div>
-              <h2>
-                <a href="#">
-                  Agrege una Noticia
-                </a>
-              </h2>
-              <a href="#" class="btn btn-green btn-md">
-                Leer Más
-              </a>
-            </div>
-          </div>
-        </div>
-        @endforelse
-      </div>
-      <!-- Swiper Pagination-->
-      <div class="swiper-pagination"></div>
-      <!-- Swiper Navigation-->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    </div>
+    @include('site.home.partials.slider')
   </div>
 </section>
 <!--Section Top News-->
 <section class="section-bottom-50">
   <div class="container">
     <h4>top news</h4>
-    <div class="row border-tultip row-no-gutter">
-      <div class="col-xs-12 col-lg-6">
-        <div class="blog-post"><img src="assets/images/index-2.jpg" alt="" class="img-width-auto"/><a href="blog_post.html" class="tag bg-crusta">boxing</a>
-          <div class="post-body">
-            <div class="post-title"><a href="blog_post.html" class="h3">Groves Sees Potential for DeGaleFight Soon</a></div>
-            <div class="post-meta clearfix">
-              <p>
-                <time datetime="2016"><a href="blog_post.html">Jan. 20, 2016</a></time>
-              </p>
-              <div class="post-share"><span class="icon icon-primary material-icons-share icon-sm icon-share"></span>
-                <ul class="list-share">
-                  <li><a href="#" class="fa-facebook"></a></li>
-                  <li><a href="#" class="fa-twitter"></a></li>
-                  <li><a href="#" class="fa-google-plus"></a></li>
-                  <li><a href="#" class="fa-youtube"></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-lg-6">
-        <div class="blog-posts-width-50">
-          <div class="post-50">
-            <div class="blog-post"><img src="assets/images/index-3.jpg" alt="" class="img-width-auto"/><a href="blog_post.html" class="tag bg-green">rally</a>
-              <div class="post-body">
-                <div class="post-title"><a href="blog_post.html" class="h5">Inside Speedway: Ownership Review</a></div>
-                <div class="post-meta clearfix">
-                  <p>
-                    <time datetime="2016"><a href="blog_post.html">Jan. 19, 2016</a></time>
-                  </p>
-                  <div class="post-share"><span class="icon icon-primary material-icons-share icon-sm icon-share"></span>
-                    <ul class="list-share">
-                      <li><a href="#" class="fa-facebook"></a></li>
-                      <li><a href="#" class="fa-twitter"></a></li>
-                      <li><a href="#" class="fa-google-plus"></a></li>
-                      <li><a href="#" class="fa-youtube"></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="post-50">
-            <div class="blog-post"><img src="assets/images/index-4.jpg" alt="" class="img-width-auto"/><a href="blog_post.html" class="tag bg-mandy">soccer</a>
-              <div class="post-body">
-                <div class="post-title"><a href="blog_post.html" class="h5">Guardiola VS Man City LIVE!</a></div>
-                <div class="post-meta clearfix">
-                  <p>
-                    <time datetime="2016"><a href="blog_post.html">Jan. 24, 2016</a></time>
-                  </p>
-                  <div class="post-share"><span class="icon icon-primary material-icons-share icon-sm icon-share"></span>
-                    <ul class="list-share">
-                      <li><a href="#" class="fa-facebook"></a></li>
-                      <li><a href="#" class="fa-twitter"></a></li>
-                      <li><a href="#" class="fa-google-plus"></a></li>
-                      <li><a href="#" class="fa-youtube"></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="post-50">
-            <div class="blog-post"><img src="assets/images/index-5.jpg" alt="" class="img-width-auto"/><a href="blog_post.html" class="tag bg-primary">nfl</a>
-              <div class="post-body">
-                <div class="post-title"><a href="blog_post.html" class="h5">Wilson Stars in Pro Bowl Even</a></div>
-                <div class="post-meta clearfix">
-                  <p>
-                    <time datetime="2016"><a href="blog_post.html">Jan. 22, 2016</a></time>
-                  </p>
-                  <div class="post-share"><span class="icon icon-primary material-icons-share icon-sm icon-share"></span>
-                    <ul class="list-share">
-                      <li><a href="#" class="fa-facebook"></a></li>
-                      <li><a href="#" class="fa-twitter"></a></li>
-                      <li><a href="#" class="fa-google-plus"></a></li>
-                      <li><a href="#" class="fa-youtube"></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="post-50">
-            <div class="blog-post"><img src="assets/images/index-6.jpg" alt="" class="img-width-auto"/><a href="blog_post.html" class="tag bg-mandy">rally</a>
-              <div class="post-body">
-                <div class="post-title"><a href="blog_post.html" class="h5">Dakar Car Injures Lots of Spectators</a></div>
-                <div class="post-meta clearfix">
-                  <p>
-                    <time datetime="2016"><a href="blog_post.html">Jan. 25, 2016</a></time>
-                  </p>
-                  <div class="post-share"><span class="icon icon-primary material-icons-share icon-sm icon-share"></span>
-                    <ul class="list-share">
-                      <li><a href="#" class="fa-facebook"></a></li>
-                      <li><a href="#" class="fa-twitter"></a></li>
-                      <li><a href="#" class="fa-google-plus"></a></li>
-                      <li><a href="#" class="fa-youtube"></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    @include('site.home.partials.top-news')
   </div>
 </section>
 <!--Section Main Content-->
@@ -659,69 +498,10 @@
       <!--Section Sidebar-->
       <div class="col-xs-12 col-lg-4">
         <div class="sidebar display-3">
-          <div class="sidebar-module">
-            <h4>follow us</h4>
-            <div class="wrap border-mandy">
-              <h5>Sports news on social networks</h5>
-              <p>Be up-to-date with your fav sports events via Facebook, Twitter & more!</p>
-              <ul class="list-inline-variant-1">
-                <li><a href="#" class="fa-facebook"></a></li>
-                <li><a href="#" class="fa-twitter"></a></li>
-                <li><a href="#" class="fa-google-plus"></a></li>
-                <li><a href="#" class="fa-youtube"></a></li>
-              </ul>
-            </div>
-            <div class="wrap bg-gray">
-              <h5>Sign up for sports updates!</h5>
-              <p>Give us your email and you will be daily updated with latest sports events, in detail!</p>
-              <!-- Rd Mailform result field-->
-              <div class="rd-mailform-validate"></div>
-              <!-- RD Mailform-->
-              <form data-result-class="rd-mailform-validate" data-form-type="subscribe" method="post" action="bat/rd-mailform.php" class="rd-mailform subscribe">
-                <input type="text" name="email" data-constraints="@NotEmpty @Email" placeholder="Your e-mail">
-                <button class="btn btn-primary btn-sm full-width">Subscribe</button>
-              </form>
-            </div>
-          </div>
-          <div class="sidebar-module">
-            <h4>recent sports events</h4>
-            <div class="border-green">
-              <div class="blog-post-variant-3">
-                <div class="post-img"><img src="assets/images/sidebar-1.jpg" alt=""/></div>
-                <div class="post-body bg-dark">
-                  <div class="post-body-inside bg-dark">
-                    <div class="post-title">
-                      <h6><a href="blog_post.html" class="text-uppercase">Australian Open 2016: Federer Looms Large for Djokovic in...</a></h6>
-                    </div><a href="blog_post.html" class="btn btn-icon-sm btn-transparent"></a>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-post-variant-3">
-                <div class="post-img"><img src="assets/images/sidebar-2.jpg" alt=""/></div>
-                <div class="post-body bg-gray">
-                  <div class="post-body-inside bg-gray">
-                    <div class="post-title">
-                      <h6><a href="blog_post.html" class="text-uppercase">Undefeated HS Wrestler Throws Match to Opponent with Special...</a></h6>
-                    </div><a href="blog_post.html" class="btn btn-icon-sm btn-transparent"></a>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-post-variant-3">
-                <div class="post-img"><img src="assets/images/sidebar-3.jpg" alt=""/></div>
-                <div class="post-body bg-dark">
-                  <div class="post-body-inside bg-dark">
-                    <div class="post-title">
-                      <h6><a href="blog_post.html" class="text-uppercase">Panthers Say Manning Hasn`t Lost a Thing</a></h6>
-                    </div><a href="blog_post.html" class="btn btn-icon-sm btn-transparent"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="sidebar-module">
-            <h4>latest tweets</h4>
-            <div class="border-tultip"><a href="https://twitter.com/templatemonster" data-widget-id="721950285980180480" data-chrome="nofooter noborders noscrollbar noheader transparent" data-tweet-limit="3" data-link-color="#3ec0e1" class="twitter-timeline twitter-wjs">Tweets by @templatemonster</a></div>
-          </div>
+          @include('site.home.partials.follow-us')
+          @include('site.home.partials.recent-sports-events')          
+          @include('site.home.partials.latest-tweets')
+
           <div class="sidebar-module">
             <h4>most watched videos</h4>
             <div class="border-primary">
