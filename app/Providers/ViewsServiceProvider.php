@@ -23,7 +23,15 @@ class ViewsServiceProvider extends ServiceProvider
         view()->composer('site.template.social-media', function ($view) {
             $socials    = \App\Social::all();
             $view->with('socials', $socials);
-
+        });
+        view()->composer('site.home.layout', function ($view) {
+            $categories = new \App\Category;
+            $view->with('nd1', $categories->where('index','nd1')->first());
+            $view->with('nd2', $categories->where('index','nd2')->first());
+            $view->with('nd3', $categories->where('index','nd3')->first());
+            $view->with('nd4', $categories->where('index','nd4')->first());
+            $view->with('nd5', $categories->where('index','nd5')->first());
+            $view->with('nd6', $categories->where('index','nd6')->first());
         });
         
     }

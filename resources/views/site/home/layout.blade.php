@@ -24,12 +24,18 @@
         <section class="section-bottom-50">
           <h4 class="block-inline">featured news</h4>
           <div class="btn-group-isotope clearfix">
-            <button data-isotope-filter="breaking-news" data-isotope-group="gallery" class="active">breaking news</button>
+            <!--<button data-isotope-filter="breaking-news" data-isotope-group="gallery" class="active">breaking news</button>
             <button data-isotope-filter="baseball" data-isotope-group="gallery"> baseball</button>
             <button data-isotope-filter="basketball" data-isotope-group="gallery"> basketball</button>
             <button data-isotope-filter="soccer" data-isotope-group="gallery"> soccer</button>
             <button data-isotope-filter="motosports" data-isotope-group="gallery"> motorsports</button>
-            <button data-isotope-filter="olympics" data-isotope-group="gallery"> olympics</button>
+            <button data-isotope-filter="olympics" data-isotope-group="gallery"> olympics</button>-->
+            <button data-isotope-filter="{{$nd1->name}}" data-isotope-group="gallery"> {{$nd1->name}} </button>
+            <button data-isotope-filter="{{$nd2->name}}" data-isotope-group="gallery"> {{$nd2->name}} </button>
+            <button data-isotope-filter="{{$nd3->name}}" data-isotope-group="gallery"> {{$nd3->name}} </button>
+            <button data-isotope-filter="{{$nd4->name}}" data-isotope-group="gallery"> {{$nd4->name}} </button>
+            <button data-isotope-filter="{{$nd5->name}}" data-isotope-group="gallery"> {{$nd5->name}} </button>
+            <button data-isotope-filter="{{$nd6->name}}" data-isotope-group="gallery"> {{$nd6->name}} </button>
           </div>
           <!--Isotope-->
           <div data-isotope-layout="fitRows" data-isotope-group="gallery" class="row row-no-gutter isotope border-green">
