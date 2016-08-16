@@ -67,57 +67,19 @@
 				</li>
 				@endif
 				<li>
-					<a href="other.html">Otros deportes</a>
-				  	<!-- RD Navbar Dropdown-->
-				    <ul class="rd-navbar-dropdown">
+					<a href="other.html">Categorias</a>
+					<ul class="rd-navbar-dropdown">
+					@forelse($categories as $category )
+						@if($category->index!="bar1"&&$category->index!="bar2"&&$category->index!="bar3")
 						<li>
-							<a href="" onclick="return false">Categories Layout</a>
-							<ul class="rd-navbar-dropdown">
-								<li><a href="categories_grid.html">Categories Grid</a></li>
-								<li><a href="categories_masonry.html">Categories Masonry</a></li>
-							</ul>
+							<a href="{{ route('category.name',$category->name) }}">{{ $category->name }}</a>
 						</li>
+						@endif
+					@empty
 						<li>
-							<a href="" onclick="return false">Post layout</a>
-							<ul class="rd-navbar-dropdown">
-								<li><a href="blog_post.html">Post Default</a></li>
-								<li><a href="post-slider.html">Post Slider</a></li>
-								<li><a href="post-video.html">Post Video</a></li>
-								<li><a href="post-audio.html">Post Audio</a></li>
-								<li><a href="post-link.html">Post Link</a></li>
-								<li><a href="post-quote.html">Post Quote</a></li>
-							</ul>
+							<a href="#">No hay categorías</a>
 						</li>
-						<li>
-							<a href="" onclick="return false">Header Settings</a>
-							<ul class="rd-navbar-dropdown">
-								<li><a href="index.html">Default Header</a></li>
-								<li><a href="header-cent.html">Center Header</a></li>
-								<li><a href="header-fullwidth.html">Fullwidth Header</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="" onclick="return false">Footer Settings</a>
-							<ul class="rd-navbar-dropdown">
-								<li><a href="footer_1.html">Footer Style 1</a></li>
-								<li><a href="footer_2.html">Footer Style 2</a></li>
-								<li><a href="footer_3.html">Footer Style 3</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="" onclick="return false">Sidebar Settings</a>
-							<ul class="rd-navbar-dropdown">
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="typography.html">Typography</a>
-						</li>
-						<li>
-							<a href="404.html">404</a>
-						</li>
+					@endforelse
 				    </ul>
 				</li>
 		      <li>

@@ -1,24 +1,22 @@
 <div class="row border-tultip row-no-gutter">
 	<div class="col-xs-12 col-lg-6">
-		<?php $i=0;?>
 		@forelse(
-		$news=App\Notice::where('secction','top news main')->orderBy('id', 'desc')->get() as $notice)
-		@if($i==0)
-		    <div class="blog-post {{ $i++ }}">
-		    	<img src="assets/images/index-2.jpg" alt="" class="img-width-auto"/>
+		$news=App\Notice::where('secction','top news main')->orderBy('id', 'desc')->take(1)->get() as $notice)
+		    <div class="blog-post ">
+		    	<img src="{!! $notice->oneImg($notice->img) !!}" alt="" class="img-width-auto"/>
 		    	<a href="{{ route('blog.post', $notice->id) }}" class="tag bg-crusta">
-		    		boxing
+		    		{{ $notice->category->name }}
 		    	</a>
 			    <div class="post-body">
 			        <div class="post-title">
 			        	<a href="{{ route('blog.post', $notice->id) }}" class="h3">
-			        		Groves Sees Potential for DeGaleFight Soon
+			        		{{ $notice->title }}
 			        	</a>
 			        </div>
 			        <div class="post-meta clearfix">
 						<p>
 							<time datetime="2016">
-								<a href="{{ route('blog.post', $notice->id) }}">Jan. 20, 2016</a>
+								<a href="{{ route('blog.post', $notice->id) }}">{{ $notice->created_at }}</a>
 							</time>
 						</p>
 			          	<div class="post-share">
@@ -41,7 +39,6 @@
 			        </div>
 			    </div>
 			</div>
-		@endif	
 		@empty
 		    <div class="blog-post">
 		    	<img src="http://placehold.it/586x462?text=TOP+NEWS,+IMGEN:+586x462" alt="" class="img-width-auto"/>
@@ -86,11 +83,11 @@
 		<div class="blog-posts-width-50">
 			<?php $i=0;?>
 			@forelse(
-			$news=App\Notice::where('secction','top news')->orderBy('id', 'desc')->get() as $notice)
-				@if($i!=0 && $i<=4)
+			$news=App\Notice::where('secction','top news')->orderBy('id', 'desc')->take(4)->get() as $notice)
+				@if($i!=0 || $i<=4)
 					<div class="post-50 {{ $i++ }}">
 						<div class="blog-post">
-							<img src="http://placehold.it/293x231?text=IMGEN:+293x231" alt="" class="img-width-auto"/>
+							<img src="{!! $notice->oneImg($notice->img) !!}" alt="" class="img-width-auto"/>
 							<a href="{{ route('blog.post', $notice->id) }}" class="tag bg-green">
 								Categoria
 							</a>

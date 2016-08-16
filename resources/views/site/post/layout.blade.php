@@ -133,69 +133,9 @@
       <!--Section Sidebar-->
       <div class="col-xs-12 col-lg-4">
         <div class="sidebar display-4">
-          <div class="sidebar-module">
-            <h4>follow us</h4>
-            <div class="wrap border-mandy">
-              <h5>Sports news on social networks</h5>
-              <p>Be up-to-date with your fav sports events via Facebook, Twitter & more!</p>
-              <ul class="list-inline-variant-1">
-                <li><a href="#" class="fa-facebook"></a></li>
-                <li><a href="#" class="fa-twitter"></a></li>
-                <li><a href="#" class="fa-google-plus"></a></li>
-                <li><a href="#" class="fa-youtube"></a></li>
-              </ul>
-            </div>
-            <div class="wrap bg-gray">
-              <h5>Sign up for sports updates!</h5>
-              <p>Give us your email and you will be daily updated with latest sports events, in detail!</p>
-              <!-- Rd Mailform result field-->
-              <div class="rd-mailform-validate"></div>
-              <!-- RD Mailform-->
-              <form data-result-class="rd-mailform-validate" data-form-type="subscribe" method="post" action="bat/rd-mailform.php" class="rd-mailform subscribe">
-                <input type="text" name="email" data-constraints="@NotEmpty @Email" placeholder="Your e-mail">
-                <button class="btn btn-primary btn-sm full-width">Subscribe</button>
-              </form>
-            </div>
-          </div>
-          <div class="sidebar-module">
-            <h4>recent sports events</h4>
-            <div class="border-green">
-              <div class="blog-post-variant-3">
-                <div class="post-img"><img src="images/sidebar-1.jpg" alt=""/></div>
-                <div class="post-body bg-dark">
-                  <div class="post-body-inside bg-dark">
-                    <div class="post-title">
-                      <h6><a href="blog_post.html" class="text-uppercase">Australian Open 2016: Federer Looms Large for Djokovic in...</a></h6>
-                    </div><a href="blog_post.html" class="btn btn-icon-sm btn-transparent"></a>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-post-variant-3">
-                <div class="post-img"><img src="images/sidebar-2.jpg" alt=""/></div>
-                <div class="post-body bg-gray">
-                  <div class="post-body-inside bg-gray">
-                    <div class="post-title">
-                      <h6><a href="blog_post.html" class="text-uppercase">Undefeated HS Wrestler Throws Match to Opponent with Special...</a></h6>
-                    </div><a href="blog_post.html" class="btn btn-icon-sm btn-transparent"></a>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-post-variant-3">
-                <div class="post-img"><img src="images/sidebar-3.jpg" alt=""/></div>
-                <div class="post-body bg-dark">
-                  <div class="post-body-inside bg-dark">
-                    <div class="post-title">
-                      <h6><a href="blog_post.html" class="text-uppercase">Panthers Say Manning Hasn`t Lost a Thing</a></h6>
-                    </div><a href="blog_post.html" class="btn btn-icon-sm btn-transparent"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="sidebar-module">
-            <h4>latest tweets</h4>
-            <div class="border-tultip"><a href="https://twitter.com/templatemonster" data-widget-id="721950285980180480" data-chrome="nofooter noborders noscrollbar noheader transparent" data-tweet-limit="3" data-link-color="#3ec0e1" class="twitter-timeline twitter-wjs">Tweets by @templatemonster</a></div>
-          </div>
+          @include('site.home.partials.follow-us')
+          @include('site.home.partials.recent-sports-events')          
+          @include('site.home.partials.latest-tweets')
           <div class="sidebar-module">
             <h4>most watched videos</h4>
             <div class="border-primary">

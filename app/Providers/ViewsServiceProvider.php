@@ -24,6 +24,9 @@ class ViewsServiceProvider extends ServiceProvider
             $socials    = \App\Social::all();
             $view->with('socials', $socials);
         });
+        view()->composer('site.template.header', function ($view) {
+            $view->with('categories', \App\Category::all());
+        });
         view()->composer('site.home.layout', function ($view) {
             $categories = new \App\Category;
             $view->with('nd1', $categories->where('index','nd1')->first());

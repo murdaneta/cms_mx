@@ -36,14 +36,13 @@
                         {!! Form::label('secction','Situar Noticia',['class'=>'control-label']) !!}
                         {!! Form::select('secction',[
                             null=>null,
-                            'slider'                =>'slider(1170x600)',
+                            'slider'                =>'slider',
                             'top news'              =>'top news(293x231)',
                             'top news main'         =>'top news main(586x462)',
-                            'featured news'         =>'featured news',
-                            'latest news'           =>'latest news',
-                            'recent sports events'  =>'recent sports events',
-                            'more news'             =>'more news',
-                            'latest news'           =>'recent sports events'],
+                            'featured news'         =>'featured news(385x305)',
+                            'latest news'           =>'latest news(385x305)',
+                            'recent sports events'  =>'recent sports events(385x305)',
+                            'more news'             =>'more news(385x305)'],
                             null,
                             ['class'=>'c-select form-control boxed']) !!}
                     </fieldset>

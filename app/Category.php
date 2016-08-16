@@ -20,6 +20,6 @@ class Category extends Model
 							'user_id'];
 	public function news()
     {
-        return $this->belongsTo('App\Notice','id');
+        return $this->hasMany('App\Notice','category_id');
     }
 }
