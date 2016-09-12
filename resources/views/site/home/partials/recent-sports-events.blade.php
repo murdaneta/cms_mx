@@ -1,5 +1,5 @@
 <div class="sidebar-module">
-	<h4>recent sports events</h4>
+	<h4>recientes eventos deportivos</h4>
 	<div class="border-green">
 		<div class="blog-post-variant-3">
 			<div class="post-img">

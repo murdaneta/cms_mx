@@ -1,0 +1,16 @@
+body {
+    color: #888;
+    background-color: white;
+}
+.rd-navbar-brand .brand-name {
+    color: #2B2B2B;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #3ec0e1;
+}
+.btn-group-isotope button:hover {
+    color: #3ec0e1;
+}
+.btn-group-isotope button.active {
+    color: #3ec0e1;
+}

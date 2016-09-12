@@ -39,14 +39,14 @@
 	<div class="copyright border">
 	    <div class="rd-navbar-brand">
 	    	<a href="index.html" class="brand-name">
-	    		<span class="text-bold">&lsquo;daily</span>
-	    		<span>sports</span>
+	    		<span class="text-bold"></span>
+	    		<span>90total</span>
 	    	</a>
 	    </div>
 	    <p>
 	    	&#169; &nbsp;
 	    	<span id="copyright-year"></span> 
-	    	'Daily Sports. All Rights Reserved
+	    	90total. Todos los derechos reservados
 	    </p>
 	</div>
 </div>

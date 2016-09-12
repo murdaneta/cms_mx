@@ -10,7 +10,7 @@
 <!--Section Top News-->
 <section class="section-bottom-50">
   <div class="container">
-    <h4>top news</h4>
+    <h4 style="color:#f1bd3b;">Top de Noticias</h4>
     @include('site.home.partials.top-news')
   </div>
 </section>
@@ -26,7 +26,7 @@
         @include('site.home.partials.latest-news')        
         <!--Section More News-->
         <section>
-          <h4>more news</h4>
+          <h4>Más Noticias</h4>
           <div class="row row-no-gutter border-crusta">
             <div class="col-xs-12">
               <div class="blog-post-variant-4">
@@ -130,10 +130,23 @@
       <div class="col-xs-12 col-lg-4">
         <div class="sidebar display-3">
           @include('site.home.partials.follow-us')
-          @include('site.home.partials.recent-sports-events')          
+          @include('site.home.partials.recent-sports-events')
           @include('site.home.partials.latest-tweets')
-
           <div class="sidebar-module">
+            <h4>facebook</h4>
+            <div class="wrap border-primary">
+              <div id="fb-root"></div>
+              <!-- Facebook Feed-->
+              <div class="fb-page-responsive">
+                <div data-href="https://www.facebook.com/90total" data-tabs="timeline" data-height="217" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" class="fb-page">
+                  <div class="fb-xfbml-parse-ignore">
+                    <blockquote cite="https://www.facebook.com/90total"><a href="https://www.facebook.com/90total">90total</a></blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>        
+          {{-- <div class="sidebar-module">
             <h4>most watched videos</h4>
             <div class="border-primary">
               <div class="blog-post-variant-3">
@@ -221,22 +234,8 @@
               <p>The Daily Sports is a fully digital sports news source. Yet we have a big, dedicated team of professional sports writers, who attend the biggest live sports events in US and around the world.</p>
               <p>Their unique reporting as well as our office-based analytics for sports breaking news make "The Daily Sports" an ultimate destination of all!</p><a href="about.html" class="btn btn-primary btn-sm">Read more</a>
             </div>
-          </div>
-          <div class="sidebar-module">
-            <h4>facebook</h4>
-            <div class="wrap border-primary">
-              <div id="fb-root"></div>
-              <!-- Facebook Feed-->
-              <div class="fb-page-responsive">
-                <div data-href="https://www.facebook.com/TemplateMonster" data-tabs="timeline" data-height="217" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" class="fb-page">
-                  <div class="fb-xfbml-parse-ignore">
-                    <blockquote cite="https://www.facebook.com/TemplateMonster"><a href="https://www.facebook.com/TemplateMonster">TemplateMonster</a></blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="sidebar-module clearfix">
+          </div> --}}
+          {{-- <div class="sidebar-module clearfix">
             <h4>instagram</h4>
             <div class="border-green"><!-- RD Instafeed-->
               <div data-instafeed-clientid="44f19408f04040bd85214315861a84a1" data-instafeed-get="user" data-instafeed-user="499522078" class="instafeed element-groups-xs-custom">
@@ -290,7 +289,7 @@
                 <div class="rdc-panel clearfix"><a class="rdc-next"></a><a class="rdc-prev"></a></div>
               </div>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>

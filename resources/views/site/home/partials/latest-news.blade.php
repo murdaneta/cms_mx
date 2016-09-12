@@ -1,5 +1,5 @@
 <section class="section-bottom-50">
-  <h4>latest news</h4>
+  <h4>Últimas noticias</h4>
   <div class="blog-posts-width-50 border-primary">
   	<!-- seis veces-->
   	@forelse(App\Notice::where('secction','latest news')->orderBy('id', 'desc')->take(6)->get() as $notice)
@@ -44,7 +44,7 @@
       </div>
     </div>
     @empty
-    @for ($i=1; $i <=6 ; $i++) {
+    @for ($i=1; $i <=6 ; $i++)
     <div class="post-50">
       <div class="blog-post blog-post-variant-2">
       	<img src="http://placehold.it/385x305?text=ND1,+IMAGEN:+385x305" alt=""/>

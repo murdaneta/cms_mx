@@ -1,5 +1,5 @@
 <section class="section-bottom-50">
-          <h4 class="block-inline">featured news</h4>
+          <h4 class="block-inline" style="color:#48d46b;"> Noticias populares</h4>
           <div class="btn-group-isotope clearfix">
             @if($nd1)
             <button data-isotope-filter="{{$nd1->name}}" data-isotope-group="gallery" class="active">
